@@ -26,7 +26,7 @@ const Import = (props) => {
   const handleClose = () => {
     setAnchorEl(null);
   };
-  const someFunc = (event) => {
+  const deleteFunc = (event) => {
     console.log(event.currentTarget);
     setIndex(event.currentTarget);
     props.removeMake(index);
@@ -73,7 +73,7 @@ const Import = (props) => {
                   open={Boolean(anchorEl)}
                   onClose={handleClose}
                 >
-                  <MenuItem onClick={someFunc}>Delete</MenuItem>
+                  <MenuItem onClick={deleteFunc}>Delete</MenuItem>
                 </Menu>
               </TableCell>
 

@@ -18,8 +18,9 @@ const cars = (state = [], action) => {
 const makes = (state = [], action) => {
   switch (action.type) {
     case "FETCH_MAKES":
-      return [...state, action.value];
-    case "DELETE_MAKE":
+      return action.value;
+    case "REMOVE_MAKE":
+      console.log("passed to reducer" + action.value);
       const makes = [...state];
       makes.splice(action.value, 1);
       return makes;
